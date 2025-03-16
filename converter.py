@@ -33,7 +33,9 @@ def convertir_png_en_webp(dossier_source, dossier_destination):
                 print(f"Erreur lors de la conversion de {nom_fichier} : {e}")
 
 # Exemple d'utilisation
-dossier_source = "./images/poison_mondain_bonus1"  # Remplacez par le chemin de votre dossier PNG
-dossier_destination = "./images/poison_mondain_bonus1_webp"  # Remplacez par le chemin où vous voulez enregistrer les WebP
+iters = [1,2,3,4,5,6,7]
+for iter in iters:
+    dossier_source = f"./images/poison_mondain_bonus_{iter}"  # Remplacez par le chemin de votre dossier PNG
+    dossier_destination = f"./images/poison_mondain_bonus_{iter}"  # Remplacez par le chemin où vous voulez enregistrer les WebP
 
-convertir_png_en_webp(dossier_source, dossier_destination)
+    convertir_png_en_webp(dossier_source, dossier_destination)
