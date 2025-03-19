@@ -29,7 +29,7 @@ def split_image(image_path, output_folder, crop_positions, crop_size,bonus):
     for idx, (x, y) in enumerate(crop_positions):
         if x + crop_size[0] <= width and y + crop_size[1] <= height:
             cropped = img.crop((x, y, x + crop_size[0], y + crop_size[1]))
-            folder_tmp = output_folder + f"/fantome_opera_bonus_{bonus}" + "/"
+            folder_tmp = output_folder + f"/bijou_cantatrice_bonus_{bonus}" + "/"
             os.makedirs(folder_tmp, exist_ok=True)
             page_number = os.path.basename(image_path).split('_img')[0].split("page_")[1]
             if int(page_number) % 2:
@@ -66,11 +66,16 @@ def split_image(image_path, output_folder, crop_positions, crop_size,bonus):
     return cropped_images
 
 # Exemple d'utilisation
-pdf_path = "./enquetes/Export_Sc_II_EN.pdf"
+pdf_path = "./enquetes/Export_Sc_III_EN.pdf"
 output_folder = "enquetes_output"
 crop_output_folder = "cropped_images"
+# Pour pdf francais
 crop_size = (372, 520)  # Largeur et hauteur de chaque sous-image
 crop_positions = [(239, 80),(628, 80),(43, 618),(433, 618),(824, 618),(239, 1156),(628, 1156)]
+
+# Pour pdf anglais
+crop_size = (750, 1039)  # Largeur et hauteur de chaque sous-image
+crop_positions = [(479, 155),(1251, 155),(84, 1233),(865, 1233),(1642, 1233),(479, 2312),(1251, 2312)]
 
 # Étape 1 : Extraire les images du PDF
 extracted_images = extract_images_from_pdf(pdf_path, output_folder)

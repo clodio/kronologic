@@ -35,7 +35,7 @@ def convertir_png_en_webp(dossier_source, dossier_destination):
 # Exemple d'utilisation
 iters = [1,2,3,4,5,6,7]
 for iter in iters:
-    dossier_source = f"./images/poison_mondain_bonus_{iter}"  # Remplacez par le chemin de votre dossier PNG
-    dossier_destination = f"./images/poison_mondain_bonus_{iter}"  # Remplacez par le chemin où vous voulez enregistrer les WebP
+    dossier_source = f"./\images/bijou_cantatrice_bonus_{iter}"  # Remplacez par le chemin de votre dossier PNG
+    dossier_destination = f"./\images/bijou_cantatrice_bonus_{iter}"  # Remplacez par le chemin où vous voulez enregistrer les WebP
 
     convertir_png_en_webp(dossier_source, dossier_destination)
